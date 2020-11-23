@@ -5,8 +5,7 @@ const Constraint = Matter.Constraint;
 var engine, world;
  
 function setup() {
-  //createCanvas(1422, 800);
-  createCanvas(3000, 800);
+  createCanvas(1422, 800);
   engine = Engine.create();
   world = engine.world;
  
@@ -17,8 +16,7 @@ function setup() {
   chain = new Chain(polygon.body,{x : 150, y : 350})
  
   //create a ground
-  //ground = new Ground(711, 792, width, 20)
-  ground = new Ground(1500, 792, width, 20)
+  ground = new Ground(711, 792, width, 20)
  
   //create the Holders
   holder1 = new Ground(600, 500, 250, 20)
@@ -92,11 +90,16 @@ function draw() {
   block20.display();
   block21.display();
   block22.display();
-  strokeWeight(2);
+  strokeWeight(1.3);
   stroke("white");
   fill("white");
   textSize(35);
   text("Drag the Hexagonal Stone and Release it, to launch it towards the blocks", 100, 50);
+  strokeWeight(1.1);
+  stroke("white");
+  fill("white");
+  textSize(25);
+  text("Press the Space to get another chance", 950, 750);
 }
 
 function mouseDragged() {
